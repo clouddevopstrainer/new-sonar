@@ -3,8 +3,8 @@ provider "aws" {
 }
 
 # Security group to allow SSH, HTTP, NodePort
-resource "aws_security_group" "dev1_sg" {
-  name        = "new1-sg"
+resource "aws_security_group" "dev2_sg" {
+  name        = "new2-sg"
   description = "Allow SSH, HTTP, NodePort"
 
   ingress {
@@ -44,7 +44,7 @@ resource "aws_instance" "app_server" {
   ami                    = var.ami_id
   instance_type          = var.instance_type
   key_name               = var.key_name
-  vpc_security_group_ids = [aws_security_group.dev1_sg.id]
+  vpc_security_group_ids = [aws_security_group.dev2_sg.id]
 
   user_data = <<-EOF
               #!/bin/bash
