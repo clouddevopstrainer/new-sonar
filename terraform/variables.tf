@@ -13,11 +13,11 @@ variable "instance_type" {
 variable "key_name" {
   description = "Existing EC2 Key Pair name for SSH access"
   type        = string
-  default     = "tf"
+  default     = "tik"
 }
 
 variable "ami_id" {
   description = "Ubuntu 22.04 AMI ID"
   type        = string
-  default     = "ami-0bbdd8c17ed981ef9"
+  default     = "ami-0c398cb65a93047f2"
 }
